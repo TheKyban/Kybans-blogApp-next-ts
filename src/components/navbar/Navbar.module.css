@@ -1,0 +1,25 @@
+@media screen and (max-width: 1124px) {
+    .socials {
+        display: none;
+    }
+
+    .logo {
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .links {
+        justify-content: flex-end !important;
+        gap: 25px;
+    }
+    .link {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .logo > h1 {
+        font-size:1.5rem !important ;
+    }
+}
