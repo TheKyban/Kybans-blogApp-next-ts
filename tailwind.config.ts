@@ -21,6 +21,7 @@ const config: Config = {
             },
             gridTemplateColumns: {
                 auto_fit: "repeat(auto-fit, minmax(12rem, 1fr))",
+                auto_fit_2: "repeat(auto-fit, minmax(5rem, 60px))",
             },
         },
     },

@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import styles from "./TrendingCard.module.css";
+import styles from "./FeaturedBlog.module.css";
 
-const TrendingCard = () => {
+const FeaturedBlog = () => {
     return (
         <div className={`${styles.container} flex gap-10 items-center`}>
             {/* Image */}
@@ -49,4 +49,4 @@ const TrendingCard = () => {
     );
 };
 
-export default TrendingCard;
+export default FeaturedBlog;

@@ -7,18 +7,11 @@ export const CategoryBG = {
     coding: "#5e4fff31",
 };
 
-export type CategoryName =
-    | "style"
-    | "fashion"
-    | "food"
-    | "travel"
-    | "culture"
-    | "coding";
-
-export interface cate {
-    name: CategoryName;
-    image: boolean;
-    imageSrc: string;
-    url: string;
-    bg: string;
-}
+export const PopularPostColor = {
+    travel: "#ff7857",
+    culture: "#ffb14f",
+    food: "#7fb881",
+    fashion: "#ff7887",
+    coding: "#775aec",
+    style: "#789cff",
+};

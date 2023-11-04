@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import ThemeToggle from "../ToggleTheme/ThemeToggle";
+import ThemeToggle from "../shared/ToggleTheme/ThemeToggle";
 import Image from "next/image";
 import styles from "./Navbar.module.css";
-import ResponsiveMenu, { HamburgerIcon } from "../mobilePhone/ResponsiveMenu";
+import ResponsiveMenu, { HamburgerIcon } from "../shared/mobilePhone/ResponsiveMenu";
 
 const Navbar = () => {
     const [open, setOpen] = useState<boolean>(false);

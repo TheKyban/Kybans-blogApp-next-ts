@@ -1,12 +1,15 @@
-import TrendingCard from "@/components/trendingCard/TrendingCard";
 import styles from "./Home.module.css";
-import Category from "@/components/Category/Category";
+import Category from "@/components/shared/Category/Category";
 
 /**
  * Temp data
  */
-import { CategoryBG, cate } from "@/utils/colors";
-const category: Array<cate> = [
+import { CategoryBG } from "@/utils/colors";
+import FeaturedBlog from "@/components/FeaturedBlog/FeaturedBlog";
+import RecentBlog from "@/components/RecentBlogs/RecentBlog";
+import Sidebar from "@/components/sidebar/Sidebar";
+
+const category: Array<CategoryType> = [
     {
         name: "culture",
         image: true,
@@ -63,24 +66,45 @@ export default function Home() {
             </h1>
 
             {/* Trending Blog */}
-            <TrendingCard />
+            <FeaturedBlog />
 
             {/* Popular Categories */}
             <div className={`flex flex-col gap-10 ${styles.categories}`}>
-                <h3 className="text-4xl font-medium">Popular Categories</h3>
+                <h3 className="font-medium text-2xl  sm:text-4xl">
+                    Popular Categories
+                </h3>
                 <div
                     className={`grid grid-cols-auto_fit gap-4 ${styles.categories}`}
                 >
                     {category.map((item, idx) => (
                         <Category
                             key={idx}
-                            text={item.name}
-                            href={item.url}
+                            name={item.name}
+                            url={item.url}
                             imageSrc={item.imageSrc}
                             image
                             bg={item.bg}
                         />
                     ))}
+                </div>
+            </div>
+
+            {/* Content */}
+            <div className="flex">
+                {/* Recent Blogs */}
+                <div className="flex flex-col gap-10 flex-[4]">
+                    {/* Heading */}
+                    <h1 className="text-2xl text-text font-semibold capitalize sm:text-4xl">
+                        Recent Blogs
+                    </h1>
+
+                    {/* Blogs */}
+                    <RecentBlog />
+                </div>
+
+                {/* Side bar */}
+                <div className={`${styles.sidebar} flex-1 hidden lg:flex`}>
+                    <Sidebar />
                 </div>
             </div>
         </main>
