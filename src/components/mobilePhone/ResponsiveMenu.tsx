@@ -5,7 +5,7 @@ import Link from "next/link";
 const ResponsiveMenu = () => {
     return (
         <div
-            className={`${styles.menu} absolute w-full bottom-0 top-20 left-0 right-0 flex justify-center pt-32`}
+            className={`${styles.menu} z-50 bg-Bg absolute w-full bottom-0 top-20 left-0 right-0 flex justify-center pt-32`}
         >
             {/* Links Container */}
             <div

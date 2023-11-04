@@ -19,6 +19,9 @@ const config: Config = {
                 "--poppins": "var(--poppins)",
                 "--inter": "var(--inter)",
             },
+            gridTemplateColumns: {
+                auto_fit: "repeat(auto-fit, minmax(12rem, 1fr))",
+            },
         },
     },
     plugins: [],

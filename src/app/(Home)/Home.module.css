@@ -13,6 +13,7 @@
     .heading span {
         font-size: 3rem;
     }
+
 }
 @media screen and (max-width: 470px) {
     .heading {
@@ -22,5 +23,10 @@
 
     .heading span {
         font-size: 2rem;
+    }
+
+    .categories {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+        align-items: center;
     }
 }
