@@ -2,7 +2,6 @@
     .heading {
         font-size: 3.5rem;
         text-align: center;
-        margin-top: 50px;
     }
 }
 @media screen and (max-width: 650px) {
@@ -14,14 +13,10 @@
         font-size: 3rem;
     }
 
-    /* .sidebar {
-        display: none;
-    } */
 }
 @media screen and (max-width: 470px) {
     .heading {
         font-size: 1.8rem;
-        margin-top: 20px;
     }
 
     .heading span {

@@ -3,6 +3,7 @@ import "./globals.css";
 import { ThemeContextProvider } from "@/Providers/ThemeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import { Inter, Playpen_Sans, Poppins } from "next/font/google";
+import Footer from "@/components/footer/Footer";
 
 /**
  * FONTS
@@ -40,6 +41,7 @@ export default function RootLayout({
                         <div className="content">
                             <Navbar />
                             {children}
+                            <Footer />
                         </div>
                     </div>
                 </ThemeContextProvider>

@@ -36,6 +36,11 @@ body {
     width: 100vw;
     max-width: 1350px;
     overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 1450px) {

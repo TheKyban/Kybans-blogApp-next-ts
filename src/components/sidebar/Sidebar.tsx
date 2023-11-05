@@ -79,7 +79,7 @@ const Sidebar = () => {
                             name={item.name}
                             bg={item.bg}
                             url={item.url}
-                            hg={40}
+                            height={40}
                         />
                     ))}
                 </div>

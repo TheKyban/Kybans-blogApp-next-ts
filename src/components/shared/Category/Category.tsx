@@ -8,14 +8,14 @@ const Category = ({
     name,
     url,
     bg,
-    hg,
+    height,
 }: CategoryType) => {
     return (
         <Link
             href={url}
-            style={{ background: bg, height: hg ? `${hg}px` : "100px" }}
+            style={{ background: bg, height: height ? `${height}px` : "100px" }}
             className={`flex items-center justify-center gap-4 w-full rounded-md ${
-                !hg && "sm:h-20"
+                !height && "sm:h-20"
             } `}
         >
             {image && (

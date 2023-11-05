@@ -90,9 +90,9 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="flex">
+            <div className="flex gap-6">
                 {/* Recent Blogs */}
-                <div className="flex flex-col gap-10 flex-[4]">
+                <div className="flex flex-col gap-10 flex-[3]">
                     {/* Heading */}
                     <h1 className="text-2xl text-text font-semibold capitalize sm:text-4xl">
                         Recent Blogs
