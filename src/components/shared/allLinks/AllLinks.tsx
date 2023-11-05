@@ -5,7 +5,7 @@ const AllLinks = () => {
     return (
         <div className="flex justify-between flex-1">
             {/* Links on page */}
-            <div className="flex flex-col text-softTextColor gap-1">
+            <div className="flex flex-col text-softTextColor gap-3">
                 <h1 className="text-text text-xl font-semibold">Links</h1>
                 <div className="flex flex-col gap-3">
                     <Link href={"/"}>Homepage</Link>
@@ -27,7 +27,7 @@ const AllLinks = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex flex-col text-softTextColor gap-1">
+            <div className="flex flex-col text-softTextColor gap-3">
                 <h1 className="text-text text-xl font-semibold">Socials</h1>
                 <div className="flex flex-col gap-3">
                     <Link href={"/"}>Facebook</Link>
