@@ -1,12 +1,20 @@
 "use client";
 
-import { ReactNode, createContext, useContext, useState } from "react";
+import {
+    ReactNode,
+    createContext,
+    useContext,
+    useEffect,
+    useLayoutEffect,
+    useState,
+} from "react";
 
 /*
  * TYPES
  **/
 
 type theme = "dark" | "light";
+
 interface contextOptions {
     theme: theme;
     toggleTheme: () => void;
@@ -26,10 +34,25 @@ const ThemeContext = createContext<contextOptions>({
  */
 
 export const ThemeContextProvider = ({ children }: { children: ReactNode }) => {
+    const [isMounted, setIsMounted] = useState<boolean>(false);
     const [theme, setTheme] = useState<theme>("dark");
+
+    //Toggle theme function
     const toggleTheme = () => {
+        console.log(theme);
         setTheme(theme === "dark" ? "light" : "dark");
+        localStorage.setItem("theme", theme === "dark" ? "light" : "dark");
     };
+
+    useLayoutEffect(() => {
+        setIsMounted(true);
+        // @ts-ignore
+        setTheme(localStorage.getItem("theme") || "dark");
+    }, []);
+
+    if (!isMounted) {
+        return null;
+    }
 
     return (
         <ThemeContext.Provider value={{ theme, toggleTheme }}>

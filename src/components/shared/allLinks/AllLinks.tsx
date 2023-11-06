@@ -9,9 +9,9 @@ const AllLinks = () => {
                 <h1 className="text-text text-xl font-semibold">Links</h1>
                 <div className="flex flex-col gap-3">
                     <Link href={"/"}>Homepage</Link>
-                    <Link href={"/"}>Blog</Link>
-                    <Link href={"/"}>About</Link>
-                    <Link href={"/"}>Contact</Link>
+                    <Link href={"#recentBlogs"}>Blog</Link>
+                    <Link href={"#about"}>About</Link>
+                    <Link href={"#contact"}>Contact</Link>
                 </div>
             </div>
 
@@ -27,7 +27,7 @@ const AllLinks = () => {
             </div>
 
             {/* Socials */}
-            <div className="flex flex-col text-softTextColor gap-3">
+            <div className="flex flex-col text-softTextColor gap-3" id="contact">
                 <h1 className="text-text text-xl font-semibold">Socials</h1>
                 <div className="flex flex-col gap-3">
                     <Link href={"/"}>Facebook</Link>

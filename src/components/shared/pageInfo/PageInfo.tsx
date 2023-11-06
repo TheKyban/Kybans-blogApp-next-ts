@@ -4,7 +4,7 @@ import React from "react";
 
 const PageInfo = () => {
     return (
-        <div className="flex flex-col gap-3 flex-1 max-w-[800px] lg:flex-[2] lg:gap-5">
+        <div id="about" className="flex flex-col gap-3 flex-1 max-w-[800px] lg:flex-[2] lg:gap-5">
             {/* Image and Name */}
             <div className="flex gap-3 items-center">
                 <Image width={50} height={50} alt="avatar" src={"/logo.png"} />

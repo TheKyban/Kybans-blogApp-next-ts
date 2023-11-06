@@ -8,7 +8,7 @@ const FeaturedBlog = () => {
         <div className={`${styles.container} flex gap-10 items-center`}>
             {/* Image */}
             <div
-                className={`${styles.imgContainer} relative h-[450px] flex-auto`}
+                className={`${styles.imgContainer} relative h-[450px] flex-auto overflow-hidden`}
             >
                 <Image
                     src={"/p1.jpeg"}

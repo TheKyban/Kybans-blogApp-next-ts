@@ -38,7 +38,7 @@ export default function RootLayout({
             >
                 <ThemeContextProvider>
                     <div className="container">
-                        <div className="content">
+                        <div className="content scroll-smooth">
                             <Navbar />
                             {children}
                             <Footer />

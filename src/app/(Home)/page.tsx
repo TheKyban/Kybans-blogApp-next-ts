@@ -90,7 +90,7 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="flex gap-6">
+            <div className="flex gap-6" id="recentBlogs">
                 {/* Recent Blogs */}
                 <div className="flex flex-col gap-10 flex-[3]">
                     {/* Heading */}
