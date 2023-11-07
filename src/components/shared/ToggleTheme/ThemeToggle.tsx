@@ -10,7 +10,7 @@ const ThemeToggle = () => {
             onClick={toggleTheme}
             className={`flex items-center gap-2 px-1 py-1 rounded-xl cursor-pointer relative ${
                 theme === "dark" ? "bg-text" : "bg-text"
-            } min-w-[46px] select-none`}
+            } min-w-[46px] select-none drop-shadow-personal`}
         >
             <Image
                 src={"/sun.png"}

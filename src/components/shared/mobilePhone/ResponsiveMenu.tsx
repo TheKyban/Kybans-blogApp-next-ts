@@ -1,25 +1,61 @@
 import React from "react";
 import styles from "./ResponsiveMenu.module.css";
 import Link from "next/link";
-
-const ResponsiveMenu = () => {
+import { signOut, useSession } from "next-auth/react";
+const ResponsiveMenu = ({ clickFunc }: { clickFunc: () => void }) => {
+    const { status } = useSession();
     return (
-        <div
-            className={`${styles.menu} z-50 bg-Bg absolute w-full bottom-0 top-20 left-0 right-0 flex justify-center pt-32`}
-        >
+        <div className={`${styles.menu} w-full flex justify-center pt-10`}>
             {/* Links Container */}
             <div
-                className={`${styles.links} h-fit flex flex-col gap-5 justify-between items-center text-4xl font-mono capitalize`}
+                className={`${styles.links} h-fit flex flex-col gap-10 justify-between items-center text-4xl font-mono capitalize`}
             >
-                <Link className={styles.link} href={"/"}>
+                <Link className={styles.link} onClick={clickFunc} href={"/"}>
                     Home
                 </Link>
-                <Link className={styles.link} href={"#about"}>
+                <Link
+                    className={styles.link}
+                    href={"#about"}
+                    onClick={clickFunc}
+                >
                     Contact
                 </Link>
-                <Link className={styles.link} href={"#about"}>
+                <Link
+                    className={styles.link}
+                    href={"#about"}
+                    onClick={clickFunc}
+                >
                     About
                 </Link>
+
+                {status === "unauthenticated" ? (
+                    <Link
+                        className={styles.link}
+                        href={"/login"}
+                        onClick={clickFunc}
+                    >
+                        Login
+                    </Link>
+                ) : (
+                    <>
+                        <Link
+                            className={styles.link}
+                            href={"/write"}
+                            onClick={clickFunc}
+                        >
+                            Write
+                        </Link>
+                        <button
+                            onClick={() => {
+                                signOut();
+                                clickFunc();
+                            }}
+                            className={styles.link}
+                        >
+                            Logout
+                        </button>
+                    </>
+                )}
             </div>
         </div>
     );

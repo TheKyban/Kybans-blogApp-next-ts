@@ -4,6 +4,7 @@ import { ThemeContextProvider } from "@/Providers/ThemeProvider";
 import Navbar from "@/components/navbar/Navbar";
 import { Inter, Playpen_Sans, Poppins } from "next/font/google";
 import Footer from "@/components/footer/Footer";
+import NextSessionProvider from "@/Providers/NextSessionProvider";
 
 /**
  * FONTS
@@ -36,15 +37,17 @@ export default function RootLayout({
             <body
                 className={`${inter.variable} ${playpen_sans.variable} ${poppins.variable}`}
             >
-                <ThemeContextProvider>
-                    <div className="container">
-                        <div className="content scroll-smooth">
-                            <Navbar />
-                            {children}
-                            <Footer />
+                <NextSessionProvider>
+                    <ThemeContextProvider>
+                        <div className="container">
+                            <div className="content scroll-smooth">
+                                <Navbar />
+                                {children}
+                                <Footer />
+                            </div>
                         </div>
-                    </div>
-                </ThemeContextProvider>
+                    </ThemeContextProvider>
+                </NextSessionProvider>
             </body>
         </html>
     );

@@ -7,6 +7,7 @@
     --text: black;
     --softBg: #f0f0f0;
     --softTextColor: #626262;
+    --drop-color:blue;
 }
 
 .dark {
@@ -14,6 +15,7 @@
     --text: #ddd;
     --softBg: #1f273a;
     --softTextColor: #a6a6a6;
+    --drop-color:white
 }
 
 body {
